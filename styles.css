@@ -1,8 +1,10 @@
 body {
     font-family: Roboto, sans-serif;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     margin: 0; /* Remove default body margin */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
 
 .header {
@@ -23,11 +25,12 @@ body {
     color: #f9faf8;
     font-size: 24px;
     margin: 0; /* Remove default margin */
+    padding-left: 20px;
 }
 
 .toplinks ul {
     display: flex; /* Flexbox for horizontal alignment */
-    gap: 15px; /* Adjust gap between the list items */
+    gap: 0px; /* Adjust gap between the list items */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     list-style: none; /* Remove bullets */
@@ -90,6 +93,8 @@ body {
     flex-direction: column; /* Allow stacking of sections */
     padding: 20px; /* Padding around content */
     flex: 1 0 auto; /* Allow content to grow */
+    width: 100%; /* Ensure content takes full width */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .primary {
@@ -112,7 +117,7 @@ body {
 }
 
 .card {
-    flex: 1 1 calc(25% - 20px); /* Responsive card size */
+    flex: 0 0 calc(25% - 15px); /* Each card takes 25% width minus margins */
     background-color: #FFFFFF; /* Background color for cards */
     padding: 15px; /* Padding inside cards */
     border-radius: 8px; /* Rounded corners */
@@ -128,10 +133,16 @@ body {
 
 .quote {
     background-color: #E5E7EB; /* Quote section background color */
-    padding: 20px; /* Padding for the quote section */
-    border-radius: 5px; /* Rounded corners for quote box */
-    margin-top: 20px; /* Space above quote section */
+    padding: 40px; /* Increased padding for more space between text and edges */
+    margin: 20px 0; /* Space above and below the quote */
+    width: calc(100% + 40px); /* Increase width to compensate for potential container padding */
+    position: relative; /* Position relative for negative margin */
+    left: -20px; /* Shift it left by half of the padding */
+    box-sizing: border-box; /* Include padding in width */
 }
+
+
+
 
 .quote p {
     font-size: 24px; /* Quote text size */
@@ -140,30 +151,40 @@ body {
     margin: 0; /* Remove default margin */
 }
 
+.author {
+    text-align: right; /* Align author text to the right */
+    margin-top: 10px; /* Add space above author text */
+    font-weight: bold; /* Optional: Make the author text bold */
+}
+
 .signup {
     display: flex;
     justify-content: space-between; /* Space between text and button */
     align-items: center; /* Center vertically */
-    margin-top: 20px; /* Space above signup section */
+    margin: 20px 0 20px; /* Space above and below signup section */
+    margin-left: 20px; /* Add left margin */
+    margin-right: 20px; /* Add right margin */
     background-color: #3882F6;
     border-radius: 5px;
+    padding: 10px 30px; /* Padding for the signup section */
 }
 
 .signuptext {
-    border: 30px;
     flex: 1; /* Allow text to take available space */
+    color: white;
 }
 
 .signupbutton {
     margin-left: 20px; /* Space between text and button */
-    
+    margin-right: 50px;
 }
 
 .signupbutton button {
+    margin-top: 10px; /* Space between text and button */
     background-color: #3882F6; /* Button color */
     color: #FFFFFF; /* Button text color */
     padding: 10px 20px; /* Button padding */
-    border: none; /* Remove default border */
+    border: 2px solid white; /* Add a white border */
     border-radius: 5px; /* Rounded corners for button */
     cursor: pointer; /* Pointer cursor on hover */
 }
