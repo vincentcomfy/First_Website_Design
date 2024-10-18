@@ -1,0 +1,29 @@
+body {
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #1F2937;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+}
+
+.toplinks {
+    display: flex;
+    align-self: center;
+}
