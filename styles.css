@@ -1,29 +1,176 @@
 body {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-li {
-    text-decoration: none;
+    margin: 0; /* Remove default body margin */
 }
 
 .header {
     background-color: #1F2937;
+    width: 100%; /* Ensure header takes full width */
 }
 
 .topbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center elements */
+    padding: 20px; /* Increased padding for better spacing */
+    width: 100%; /* Ensure it takes up full width */
+    box-sizing: border-box; /* Include padding in width */
 }
 
-.logo {
+.logo h1 {
+    color: #f9faf8;
+    font-size: 24px;
+    margin: 0; /* Remove default margin */
+}
+
+.toplinks ul {
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 15px; /* Adjust gap between the list items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullets */
+}
+
+.toplinks li {
+    margin: 0; /* Reset any default margin */
+}
+
+.toplinks a {
+    text-decoration: none; /* Remove underline */
+    color: #f9faf8; /* Set link color */
+    padding: 8px 16px; /* Add padding for clickable area */
+}
+
+.banner {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space elements across the banner */
+    align-items: center; /* Center items vertically */
+    padding: 40px; /* Increased padding around the banner */
+    margin-top: 20px; /* Space between top bar and banner */
+}
+
+.banner-text {
+    flex: 1; /* Allow text to take available space */
+    margin-right: 20px; /* Add space between text and image */
+}
+
+.banner h2 {
+    font-size: 48px; /* Main hero text */
+    color: #F9FAF8;
+    font-weight: 900; /* Bold font */
+    margin: 0; /* Remove default margin */
+}
+
+.banner p {
+    font-size: 18px; /* Secondary hero text */
+    color: #E5E7EB; /* Color for secondary text */
+    margin-top: 10px; /* Add some space above */
+}
+
+.banner button {
+    margin-top: 10px; /* Space between text and button */
+    background-color: #3882F6; /* Button color */
+    color: #FFFFFF; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.banner img {
+    height: auto; /* Allow height to scale */
+    width: 400px; /* Fixed width for the image */
+    object-fit: cover; /* Cover the container without distortion */
+}
+
+.content {
     display: flex;
+    flex-direction: column; /* Allow stacking of sections */
+    padding: 20px; /* Padding around content */
+    flex: 1 0 auto; /* Allow content to grow */
+}
+
+.primary {
+    margin-bottom: 20px; /* Space between primary and quote section */
+}
+
+.bodyheader {
+    display: flex;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+    justify-self: center;
     align-self: center;
 }
 
-.toplinks {
+.cards {
     display: flex;
-    align-self: center;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    gap: 20px; /* Gap between cards */
+}
+
+.card {
+    flex: 1 1 calc(25% - 20px); /* Responsive card size */
+    background-color: #FFFFFF; /* Background color for cards */
+    padding: 15px; /* Padding inside cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text in card */
+}
+
+.card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.quote {
+    background-color: #E5E7EB; /* Quote section background color */
+    padding: 20px; /* Padding for the quote section */
+    border-radius: 5px; /* Rounded corners for quote box */
+    margin-top: 20px; /* Space above quote section */
+}
+
+.quote p {
+    font-size: 24px; /* Quote text size */
+    font-style: italic; /* Italic text */
+    color: #1F2937; /* Quote text color */
+    margin: 0; /* Remove default margin */
+}
+
+.signup {
+    display: flex;
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Space above signup section */
+    background-color: #3882F6;
+    border-radius: 5px;
+}
+
+.signuptext {
+    border: 30px;
+    flex: 1; /* Allow text to take available space */
+}
+
+.signupbutton {
+    margin-left: 20px; /* Space between text and button */
+    
+}
+
+.signupbutton button {
+    background-color: #3882F6; /* Button color */
+    color: #FFFFFF; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer {
+    background-color: #1F2937; /* Footer background color */
+    padding: 10px; /* Padding for the footer */
+    color: #FFFFFF; /* Footer text color */
+    text-align: center; /* Center footer text */
 }
